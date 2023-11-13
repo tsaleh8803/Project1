@@ -179,3 +179,11 @@ color: white;
     justify-content: center;
     margin: 0px 10px 0px 10px;
 }
+
+#logout{
+    display: inline;
+    float: right;
+    color: white;
+    padding: 10px;
+    font-family: monospace;
+}

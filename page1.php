@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $a_usernames=array("john.doe","jane.doe","johnny.doe");
+    $a_names=array("john doe","jane doe","johnny doe");
+?>
+
 <html>
     <head>
         <title>MyFirstWebPage</title>
@@ -11,7 +17,7 @@
                 <span><i class="ico burger-ico"></i>Menu</span>
                 <div class ="dropdown-menu">
                     <ul>
-                        <a href="index.html">
+                        <a href="page1.php">
                             <li>Home<i class="ico ico-l user-ico"></i></li>
                         </a>
                         <a href="page2.html">
@@ -26,6 +32,11 @@
                     </ul>
                 </div>
             </div>
+            <a href = "index.php">
+                <div id = "logout">
+                    <?php echo "welcome" . $_SESSION['user'] . " - Logout";?>
+                </div>
+            </a>
         </div>
         <div id = "page-content">
             <div id ="page-title"><h1>Welcome to Tamer's Page!</h1></div>
