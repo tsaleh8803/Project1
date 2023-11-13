@@ -1,17 +1,17 @@
 .burger-ico{
-    background: url("icons/burgermenu128p.png");
+    background: url("../icons/burgermenu128p.png");
 }
 
 .user-ico{
-    background: url("icons/user.png");
+    background: url("../icons/user.png");
 }
 
 .wallet-ico{
-    background: url("icons/wallet.png");
+    background: url("../icons/wallet.png");
 }
 
 .gallery-ico{
-    background: url("icons/gallery.png");
+    background: url("../icons/gallery.png");
 }
 
 .ico{
