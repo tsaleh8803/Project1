@@ -1,20 +1,10 @@
-Username: 
-First Name: 
-Last Name: 
-Password: 
-Sex: 
-Username: 
-First Name: 
-Last Name: 
-Password: 
-Sex: 
-Username: 
-First Name: 
-Last Name: 
-Password: 
-Sex: 
-Username: 
-First Name: 
-Last Name: 
-Password: 
-Sex: 
+Username: testuser
+First Name: tamer
+Last Name: saleh
+Password: www
+Sex: M
+Username: testuser
+First Name: tamer
+Last Name: saleh
+Password: www
+Sex: M

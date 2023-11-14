@@ -32,7 +32,7 @@ if(isset($_GET["error_code"])){
                     <input type="button" value = "Clear" onclick="formCancel()">
                 </form>
             </div>
-            <a href = "signup.php">Sign Up</a>
+            <a href = "signup.html">Sign Up</a>
         </div>
         <script>
             function formLogin(){
