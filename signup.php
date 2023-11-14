@@ -1,3 +1,28 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+if (
+    isset($_POST["username"]) &&
+    isset($_POST["firstname"]) &&
+    isset($_POST["lastname"]) &&
+    isset($_POST["pass"]) &&
+    isset($_POST["sex"])
+    ){
+        $username = $_POST["username"];
+        $firstname = $_POST["firstname"];
+        $lastname = $_POST["lastname"];
+        $password = $_POST["pass"];
+        $sex = $_POST["sex"];
+        echo "variables saved successfully";
+    }
+    else{
+        echo "username not found";
+    }
+    
+?>
+
+
 <html>
     <head>
         <title>Welcome to my portal</title>
@@ -10,7 +35,7 @@
             
             <div class = "form-div">
                 <div id ="page-title"><h1>Sign Up</h1></div>
-                <form name="frmSignup" method="Get" action="page1.php" id="form-login">
+                <form name="frmSignup" method="post" action="page1.php" id="form-login">
 
                     <div class = "form-element">
                         <label for="username">First Name: </label><br>
@@ -96,3 +121,22 @@
         </script>
     </body>
 </html>
+
+<?php
+    
+
+    $file = fopen("signup-data.txt", "a");
+
+    if ($file) {
+        fwrite($file, "Username: " . $username . "\n");
+        fwrite($file, "First Name: " . $firstname . "\n");
+        fwrite($file, "Last Name: " . $lastname . "\n");
+        fwrite($file, "Password: " . $password . "\n");
+        fwrite($file, "Sex: " . $sex . "\n");
+
+        fclose($file);
+        echo "User data has been successfully saved.";
+    } else {
+        echo "Error: Unable to open the file.";
+    }
+?>

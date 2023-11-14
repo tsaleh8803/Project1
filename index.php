@@ -12,7 +12,6 @@ if(isset($_GET["error_code"])){
 }
 ?>
 
-
 <html>
     <head>
         <title>Welcome to my portal</title>
@@ -33,7 +32,7 @@ if(isset($_GET["error_code"])){
                     <input type="button" value = "Clear" onclick="formCancel()">
                 </form>
             </div>
-            <a href = "signup.html">Sign Up</a>
+            <a href = "signup.php">Sign Up</a>
         </div>
         <script>
             function formLogin(){

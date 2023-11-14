@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <html>
     <head>
         <title>MyFirstWebPage</title>
@@ -14,18 +18,23 @@
                         <a href="page1.php">
                             <li>Home<i class="ico ico-l user-ico"></i></li>
                         </a>
-                        <a href="page2.html">
+                        <a href="page2.php">
                             <li>CV<i class="ico ico-l wallet-ico"></i></li>
                         </a>
-                        <a href="page3.html">
+                        <a href="page3.php">
                             <li>Gallery<i class="ico ico-l gallery-ico"></i></li>
                         </a>
-                        <a href="page4.html">
+                        <a href="page4.php">
                             <li>Contact Us</li>
                         </a>
                     </ul>
                 </div>
             </div>
+            <a href = "index.php">
+                <div id = "lo">
+                    <?php echo "welcome " . $_SESSION['user'] . " - Logout";?>
+                </div>
+            </a>
         </div>
         <div id = "page-content">
             <div id ="page-title"><h1>Contact Us</h1></div>

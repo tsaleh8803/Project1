@@ -1,0 +1,3 @@
+/pictures/travis.webp
+/pictures/travis1.jpeg
+/pictures/travis2.jpeg

@@ -9,7 +9,7 @@
         $success=login($user);
     }
     else{
-        echo "<script>window.location.href='loginPage.php?error_code=1';</script>";
+        echo "<script>window.location.href='index.php?error_code=1';</script>";
     } 
 
     if ($success){
@@ -18,7 +18,7 @@
     }
        
     else
-        echo "<script>window.location.href='loginPage.php?error_code=0';</script>";
+        echo "<script>window.location.href='index.php?error_code=0';</script>";
 
     //checks if a user exist
     //@param user is an boject with username aand password as properties

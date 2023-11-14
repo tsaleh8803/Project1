@@ -125,6 +125,7 @@ body {
     border: 2px solid black;
     cursor: pointer;
     margin-right: 5px;
+    border-radius: 16px;
 }
 
 .gallery-img:target img{
@@ -180,10 +181,21 @@ color: white;
     margin: 0px 10px 0px 10px;
 }
 
-#logout{
+#lo{
     display: inline;
     float: right;
     color: white;
     padding: 10px;
     font-family: monospace;
+}
+
+#home-image{
+    width: 200px;
+    height: 200px;
+}
+
+#home-image img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
 }
