@@ -1,10 +1,12 @@
-Username: testuser
+Username: tsaleh
+Password: 1234
 First Name: tamer
 Last Name: saleh
-Password: www
 Sex: M
-Username: testuser
-First Name: tamer
-Last Name: saleh
-Password: www
+
+Username: john.doe
+Password: pass
+First Name: john
+Last Name: doe
 Sex: M
+

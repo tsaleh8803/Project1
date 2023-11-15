@@ -21,23 +21,34 @@
         echo "<script>window.location.href='index.php?error_code=0';</script>";
 
     //checks if a user exist
-    //@param user is an boject with username aand password as properties
+    //@param user is an object with username aand password as properties
     //#return bool
 
     function login($user){
-        $a_usernames=array("john.doe","jane.doe","johnny.doe");
-        $a_passwords=array("pass","passw","passwd");
+        $file = fopen('signup-data.txt','r');
+
+        if ($file) {
+            while (!feof($file)) {
+                // Read a line from the file
+                $line = fgets($file);
     
-        $success=false;
+                // If the line contains "Username:", read the username
+                if (strpos($line, 'Username:') !== false) {
+                    $storedUsername = trim(str_replace('Username:', '', $line));
     
-        for($i=0;$i<sizeof($a_usernames);$i++){
-            if (($user->username==$a_usernames[$i])&&($user->password==$a_passwords[$i])){
-                $success=true;
-                break;
+                    // Read the next line to get the stored password
+                    $storedPassword = trim(str_replace('Password:', '', fgets($file)));
+    
+                    // Check if the provided username and password match
+                    if ($storedUsername === $user->username && $storedPassword === $user->password) {
+                        fclose($file); // Close the file
+                        return true; // Valid credentials
+                    }
+                }
             }
+            fclose($file);
+            return false;
         }
-        return $success;
-    }
-    
-    
+        
+    }   
 ?>
