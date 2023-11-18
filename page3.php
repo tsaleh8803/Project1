@@ -1,8 +1,11 @@
 <?php
     session_start();
     if (!isset($_SESSION["user"])){
-        header("Location:../index.php");
+        header("Location: index.php");
     }
+    $json_string = file_get_contents("galleryFile.json");
+    $json_data = json_decode($json_string,true);
+    $gallery = $json_data["gallery"];
 ?>
 
 <html>
@@ -43,21 +46,16 @@
             <div id ="page-title"><h1>My First Gallery</h1></div>
             <br>
             <div id = "gallery">
-                <div class = "gallery-img" id = "expand1">
-                    <a href = "#expand1">
-                        <img src = "pictures/travis.webp">
-                    </a>
-                </div>
-                <div class = "gallery-img" id = "expand2">
-                    <a href = "#expand2">
-                        <img src = "pictures/travis1.jpeg">
-                    </a>
-                </div>
-                <div class = "gallery-img" id = "expand3">
-                    <a href = "#expand3">
-                        <img src = "pictures/travis2.jpeg">
-                    </a>
-                </div>
+                <?php
+                for($i=1;$i<sizeof($gallery)+1;$i++){
+                    echo (
+                    '<div class = "gallery-img" id = "expand'.$i.'">
+                        <a href = "#expand'.$i.'">
+                        <img src = "pictures/'.$gallery[$i-1].'">
+                        </a>
+                    </div>');
+                }
+                ?>
                 <a href = "#" id = "close">Close</a>
             </div>
             

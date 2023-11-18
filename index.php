@@ -1,4 +1,7 @@
 <?php
+session_start();
+session_unset();
+session_destroy();
 if(isset($_GET["error_code"])){
     switch($_GET["error_code"]){
         case 0:
@@ -22,17 +25,25 @@ if(isset($_GET["error_code"])){
         <div id="page-header"></div>
         <div id = "page-content">
             <div id ="page-title"><h1>Login</h1></div>
-            <div>
+            <div class = "form-div">
                 <form name="frmLogin" method="post" action="login.php" id="form-login">
-                    <label for="username">Username: </label><br>
-                    <input type="text" name = "username" id="username"/><br><br>
-                    <label for="password">Password: </label><br>
-                    <input type="password" name = "password" id="password"/><br><br>
-                    <input type="button" value="Login" onclick="formLogin()">&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" value = "Clear" onclick="formCancel()">
+                    <div class = "form-element">
+                        <label for="username">Username: </label><br>
+                        <input type="text" class = "tf" name = "username" id="username"/><br><br>
+                    </div>  
+                    <div class = "form-element">
+                        <label for="password">Password: </label><br>
+                        <input type="password" class = "tf" name = "password" id="password"/><br><br>
+                    </div> 
+                    <div class = "form-element">
+                        <input type="button" value="Login" onclick="formLogin()">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="button" value = "Clear" onclick="formCancel()">
+                    </div> 
+
                 </form>
+                <a href = "signupPage.php">Sign Up</a>
             </div>
-            <a href = "signupPage.php">Sign Up</a>
+            
         </div>
         <script>
             function formLogin(){

@@ -32,7 +32,7 @@ body {
 }
 
 #page-header {
-    background: blue;
+    background:midnightblue;
     display: block;
     height: 40px;
     position: fixed;
@@ -111,7 +111,6 @@ body {
     width: 100%;
     text-align: center;
     margin: 5;
-    position: relative;
 }
 #gallery img{
     width: inherit;
@@ -125,6 +124,7 @@ body {
     border: 2px solid black;
     cursor: pointer;
     margin-right: 5px;
+    margin-bottom: 5px;
     border-radius: 16px;
 }
 
@@ -132,15 +132,14 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     transform: translate(-50%, -50%);
-    transition: max-width 0.3s, max-height 0.3s;
 }
 
 .gallery-img a{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
 
 #close{
@@ -148,6 +147,7 @@ body {
     color: red;
     text-decoration: none;
     text-align: right;
+    font-size: x-large;
 }
 
 .icon{

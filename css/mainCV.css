@@ -41,7 +41,7 @@ body{
 }
 
 .page-header{
-    background: blue;
+    background: midnightblue;
     display: block;
     height: 40px;
     position: fixed;
@@ -116,7 +116,7 @@ body{
 .cv-content {
     width:75%;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 50px;
 }
 .cv-header-section{
     height: 100px;
