@@ -36,7 +36,7 @@ if (
         
     }
     else{
-        echo "missing arguments";
+        echo 'alert("missing arguments")';
     }
 
 ?>

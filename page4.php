@@ -35,7 +35,7 @@
             </div>
             <a href = "index.php">
                 <div id = "lo">
-                    <?php echo "welcome " . $_SESSION['user'] . " - Logout";?>
+                    <?php echo "Welcome " . $_SESSION['user'] . " - Logout";?>
                 </div>
             </a>
         </div>

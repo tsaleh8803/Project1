@@ -10,3 +10,9 @@ First Name: john
 Last Name: doe
 Sex: M
 
+Username: jane.doe
+Password: passw
+First Name: jane
+Last Name: doe
+Sex: M
+

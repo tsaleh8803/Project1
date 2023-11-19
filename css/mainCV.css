@@ -239,7 +239,7 @@ body{
     float: right;
     color: white;
     padding: 10px;
-    font-family: monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #page-footer{

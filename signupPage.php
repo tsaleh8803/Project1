@@ -8,46 +8,35 @@
     <body>
         <div id="page-header"></div>
         <div id = "page-content">
-            
-            <div class = "form-div">
-                <div id ="page-title"><h1>Sign Up</h1></div>
+        <div id ="page-title"><h1>Sign Up</h1></div>
+            <div class = "signup-form-div">
+                
                 <form name="frmSignup" method="post" action="signup.php" id="form-login">
 
-                    <div class = "form-element">
-                        <label for="username">First Name: </label><br>
-                        <input type="text" class = "tf" name = "firstname"/>
-                    </div>
-                    <div class = "form-element">
-                        <label for="username">Last Name: </label><br>
-                        <input type="text" class = "tf" name = "lastname" />
-                    </div>
-                    <div class = "form-element">
-                        <label for="username">Username: </label><br>
-                        <input type="text" class = "tf" name = "username" />
-                    </div>
-                    <div class = "form-element">
-                        <label for="password">Password: </label><br>
-                        <input type="password" class = "tf" name = "pass" />
-                    </div>
-                    <div class = "form-element">
-                        <label for="password">Confirm Password: </label><br>
-                        <input type="password" class = "tf" name = "confPass"/>
-                    </div>
+                    <label for="username">First Name: </label><br>
+                    <input type="text" class = "tf" name = "firstname"/>
+
+                    <label for="username">Last Name: </label><br>
+                    <input type="text" class = "tf" name = "lastname" />
+
+                    <label for="username">Username: </label><br>
+                    <input type="text" class = "tf" name = "username" />
                     
-                    <div class = "form-element">
-                        <label>Address: </label> <br>
-                        <input type = "text" class = "tf" name="address" />
-                    </div>
+                    <label for="password">Password: </label><br>
+                    <input type="password" class = "tf" name = "pass" />
+                    
+                    <label for="password">Confirm Password: </label><br>
+                    <input type="password" class = "tf" name = "confPass"/>
+                    
+                    <label>Address: </label> <br>
+                    <input type = "text" class = "tf" name="address" />
+                    
 
                     <div class = "form-element">
                         <input type="radio" name="sex" value = "M" id ="rb-male" checked><label for="rb-male">Male</label>
                         <input type="radio" name="sex" value = "F" id ="rb-female"><label for="rb-female">Female</label>
                     </div>
 
-                    <div class = "form-element">
-                        <input type ="checkbox" name="captcha" id = "cb-captcha"><label for="cb-captcha">I am human</label>
-                    </div>
-                    
                     <div class = "form-element">
                         <input type="button" class = "btn" value="Signup" onclick="formSignup()">&nbsp;&nbsp;&nbsp;&nbsp;
                         <input type="button" class = "btn" value = "Clear"onclick="formCancel()">
@@ -70,11 +59,13 @@
                 var confPass = mform.elements["confPass"].value;
                 var address = mform.elements["address"].value;
                 var sex = mform.elements["sex"].value;
-                var captcha=mform.elements["captcha"].checked;
-                console.log(captcha);
 
-                if ((pass!=confPass) || (pass=="")){
-                    alert("passwords do not match");
+               
+                if(fn=="" || ln =="" || username==""){
+                    alert("Please fill in all fields");
+                }
+                else if ((pass!=confPass) || (pass=="")){
+                    alert("Passwords do not match");
                 }
                 else{
                     mform.submit();
@@ -89,7 +80,6 @@
                 mform.elements["confPass"].value = "";
                 mform.elements["address"].value = "";
                 mform.elements["sex"].value = "M";
-                mform.elements["captcha"].checked = false;
             }
         </script>
     </body>
